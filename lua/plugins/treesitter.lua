@@ -1,7 +1,11 @@
 return {
   'nvim-treesitter/nvim-treesitter',
+  branch = "master",
   lazy = false,
   build = ':TSUpdate',
+  dependencies = {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+  },
   main = 'nvim-treesitter.config',
   config = function()
     -- Auto-enable treesitter highlighting for buffers with a parser

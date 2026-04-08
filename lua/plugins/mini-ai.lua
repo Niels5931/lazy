@@ -1,7 +1,16 @@
 return {
-  "echasnovski/mini.ai",
+  "nvim-mini/mini.ai",
   version = false,
   config = function()
-    require("mini.ai").setup()
+    local ai = require("mini.ai")
+
+    ai.setup({
+      custom_textobjects = {
+        f = ai.gen_spec.treesitter({
+          a = "@function.outer",
+          i = "@function.inner",
+        }),
+      },
+    })
   end,
 }

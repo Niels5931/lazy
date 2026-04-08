@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.pairs",
+  "nvim-mini/mini.pairs",
   version = false,
   config = function()
     -- Custom config for Verilog-friendly pairing (1'b0 etc)
