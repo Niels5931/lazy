@@ -12,3 +12,10 @@ vim.keymap.set("n","-","<CMD>Oil<CR>")
 
 -- keymap for git diff toggle by mini.diff
 vim.keymap.set("n","<leader>gd",':lua MiniDiff.toggle_overlay()<CR>')
+
+vim.keymap.set("t","<C-w>h","<C-\\><C-n><C-w>h")
+vim.keymap.set("t","<C-w>l","<C-\\><C-n><C-w>l")
+
+local harpoon = require("harpoon")
+vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
+vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
