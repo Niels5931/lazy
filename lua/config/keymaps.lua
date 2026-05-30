@@ -49,3 +49,6 @@ vim.keymap.set("n", "<leader>r", function() harpoon:list():select(4) end)
 vim.keymap.set("n", "<leader>gw", function()
   require("utils.worktrees").git_worktrees()
 end, { desc = "Git Worktrees" })
+
+vim.keymap.set("n", "<leader>j", ":cnext<CR>")
+vim.keymap.set("n", "<leader>k", ":cprev<CR>")
